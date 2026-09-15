@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>You've won 10% OFF — Koffee Villa @ FROLIC 2026, Darshan University</title>
+  <meta name="description" content="Congratulations! You've won 10% OFF at Koffee Villa. Claim it at Shop No. 7 on 18th & 19th September at FROLIC 2026, Darshan University." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☕</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo:wght@400;500;600;700;800;900&family=Pinyon+Script&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #efe9d8;
+      --cream-2: #f6f2e6;
+      --brown: #7e2f15;
+      --brown-deep: #5a2010;
+      --line: rgba(126, 47, 21, 0.28);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--brown-deep);
+      font-family: "Archivo", sans-serif;
+      color: var(--brown);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .frame {
+      position: relative;
+      max-width: 760px;
+      margin: 0 auto;
+      background: var(--cream);
+      overflow: hidden;
+      box-shadow: 0 0 60px rgba(0, 0, 0, 0.45);
+    }
+
+    /* subtle paper grain */
+    .frame::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.05;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      z-index: 1;
+    }
+
+    /* grid corner decorations (from the poster) */
+    .grid-corner {
+      position: absolute;
+      width: 170px;
+      height: 170px;
+      background-image:
+        linear-gradient(var(--line) 1.5px, transparent 1.5px),
+        linear-gradient(90deg, var(--line) 1.5px, transparent 1.5px);
+      background-size: 26px 26px;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .grid-tl { top: 0; left: 0; mask-image: linear-gradient(135deg, #000 0%, transparent 78%); -webkit-mask-image: linear-gradient(135deg, #000 0%, transparent 78%); }
+    .grid-br { bottom: 0; right: 0; mask-image: linear-gradient(315deg, #000 0%, transparent 78%); -webkit-mask-image: linear-gradient(315deg, #000 0%, transparent 78%); }
+
+    .inner { position: relative; z-index: 3; padding: clamp(20px, 5vw, 40px) clamp(18px, 5vw, 44px) 0; }
+
+    /* ---------- top bar ---------- */
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      font-size: clamp(12px, 2.6vw, 15px);
+      text-transform: uppercase;
+    }
+    .topbar .dot { width: 7px; height: 7px; background: var(--brown); transform: rotate(45deg); }
+
+    /* ---------- hero ---------- */
+    .hero { text-align: center; padding: clamp(26px, 6vw, 48px) 0 clamp(8px, 2vw, 16px); }
+
+    .script {
+      font-family: "Pinyon Script", cursive;
+      font-size: clamp(34px, 8vw, 58px);
+      line-height: 1.1;
+      color: var(--brown);
+    }
+
+    .hero h1 {
+      font-family: "Alfa Slab One", serif;
+      font-weight: 400;
+      font-size: clamp(30px, 7.5vw, 56px);
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      margin-top: 6px;
+    }
+
+    .burst-wrap { position: relative; display: inline-block; margin: clamp(10px, 3vw, 20px) 0 6px; }
+    .burst {
+      width: clamp(215px, 54vw, 295px);
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 10px 0 rgba(90, 32, 16, 0.15));
+      animation: spin 18s linear infinite;
+      transform-origin: 50% 50%;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @media (prefers-reduced-motion: reduce) { .burst { animation: none; } }
+    .burst-text {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--cream);
+      line-height: 0.9;
+    }
+    .burst-text .pct { font-family: "Alfa Slab One", serif; font-size: clamp(58px, 15vw, 84px); }
+    .burst-text .off { font-family: "Archivo", sans-serif; font-weight: 800; letter-spacing: 0.35em; font-size: clamp(14px, 3.4vw, 19px); text-indent: 0.35em; }
+
+    .hero-sub {
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: clamp(12px, 3vw, 15px);
+      max-width: 420px;
+      margin: 14px auto 0;
+      line-height: 1.7;
+    }
+
+    .sparkle { position: absolute; color: var(--brown); animation: twinkle 2.6s ease-in-out infinite; }
+    @keyframes twinkle {
+      0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
+      50% { transform: scale(0.55) rotate(20deg); opacity: 0.55; }
+    }
+    .sp1 { width: 26px; top: -6px; left: 4%; animation-delay: 0s; }
+    .sp2 { width: 18px; top: 34%; right: 3%; animation-delay: 0.9s; }
+    .sp3 { width: 22px; bottom: -18px; left: 10%; animation-delay: 1.6s; }
+
+    /* ---------- instagram strip ---------- */
+    .ig-strip {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: clamp(18px, 4.5vw, 26px);
+      background: var(--brown);
+      color: var(--cream);
+      border: 2px solid var(--brown);
+      box-shadow: 6px 6px 0 rgba(90, 32, 16, 0.25);
+      padding: 14px 16px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 800;
+      font-size: clamp(11px, 2.8vw, 14px);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .ig-strip::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 40%;
+      left: -60%;
+      background: linear-gradient(105deg, transparent, rgba(239, 233, 216, 0.22), transparent);
+      animation: shine 3.2s ease-in-out infinite;
+    }
+    @keyframes shine { 0% { left: -60%; } 60%, 100% { left: 130%; } }
+    .ig-strip svg { width: clamp(18px, 4.4vw, 22px); height: clamp(18px, 4.4vw, 22px); flex: 0 0 auto; }
+    .ig-strip .handle {
+      font-family: "Alfa Slab One", serif;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      font-size: clamp(15px, 4vw, 20px);
+      white-space: nowrap;
+    }
+    .ig-strip:hover { background: var(--brown-deep); }
+    @media (prefers-reduced-motion: reduce) { .ig-strip::after { animation: none; display: none; } }
+
+    /* ---------- live counter band ---------- */
+    .counter-band {
+      margin-top: 14px;
+      border: 2px dashed var(--brown);
+      background: var(--cream-2);
+      padding: 14px 16px;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .counter-band .cb-top {
+      font-weight: 700;
+      font-size: clamp(10.5px, 2.6vw, 12.5px);
+      opacity: 0.85;
+    }
+    .counter-band .cb-num {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin: 6px 0 4px;
+      font-family: "Alfa Slab One", serif;
+      font-size: clamp(34px, 9vw, 52px);
+      line-height: 1;
+      color: var(--brown-deep);
+    }
+    .counter-band .cb-num .digit {
+      background: var(--brown);
+      color: var(--cream);
+      padding: 6px 8px 2px;
+      border-radius: 6px;
+      box-shadow: 3px 3px 0 rgba(90, 32, 16, 0.25);
+    }
+    .counter-band .cb-num .digit.bump { animation: bump 0.45s ease; }
+    @keyframes bump {
+      0% { transform: translateY(0); }
+      40% { transform: translateY(-7px) scale(1.08); }
+      100% { transform: translateY(0); }
+    }
+    .counter-band .cb-bottom {
+      font-weight: 800;
+      font-size: clamp(11px, 2.8vw, 13.5px);
+      letter-spacing: 0.14em;
+    }
+    .counter-band.skeleton .cb-num { color: transparent; }
+
+    /* ---------- section rules (thin line + thick bar) ---------- */
+    .rule { position: relative; height: 4px; border-top: 2.5px solid var(--brown); }
+    .rule::after { content: ""; position: absolute; left: 0; right: 0; top: 7px; height: 9px; background: var(--brown); }
+
+    section { padding: clamp(26px, 6vw, 44px) 0 0; }
+
+    .display {
+      font-family: "Alfa Slab One", serif;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: clamp(30px, 7vw, 46px);
+      letter-spacing: 0.01em;
+      margin-bottom: 14px;
+    }
+
+    /* ---------- how to claim ---------- */
+    .steps { list-style: none; display: grid; gap: 14px; margin-top: 22px; }
+    .steps li {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: var(--cream-2);
+      border: 2px solid var(--brown);
+      box-shadow: 5px 5px 0 var(--brown);
+      padding: 16px 18px;
+      font-weight: 600;
+      font-size: clamp(14px, 3.4vw, 17px);
+      line-height: 1.5;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .step-num {
+      flex: 0 0 auto;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--brown);
+      color: var(--cream);
+      font-family: "Alfa Slab One", serif;
+      font-size: 20px;
+      display: grid;
+      place-items: center;
+    }
+    .steps strong { color: var(--brown-deep); font-weight: 900; }
+
+    /* coupon */
+    .coupon {
+      margin-top: 22px;
+      background: var(--brown);
+      color: var(--cream);
+      border-radius: 14px;
+      padding: 10px;
+    }
+    .coupon-inner {
+      border: 2.5px dashed rgba(239, 233, 216, 0.7);
+      border-radius: 9px;
+      text-align: center;
+      padding: clamp(18px, 4.5vw, 28px) 14px;
+    }
+    .coupon .where {
+      font-family: "Alfa Slab One", serif;
+      font-size: clamp(26px, 6.4vw, 40px);
+      text-transform: uppercase;
+      line-height: 1.05;
+    }
+    .coupon .when {
+      margin-top: 8px;
+      font-weight: 800;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-size: clamp(13px, 3.2vw, 17px);
+    }
+    .coupon .hint { margin-top: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; font-size: clamp(10px, 2.6vw, 12px); opacity: 0.85; }
+
+    /* ---------- menu ---------- */
+    .menu-grid { display: grid; gap: 8px 46px; margin-top: 22px; }
+    @media (min-width: 620px) { .menu-grid { grid-template-columns: 1fr 1fr; } }
+
+    .menu-block { margin-bottom: 26px; }
+    .menu-block h3 {
+      font-family: "Alfa Slab One", serif;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: clamp(22px, 5vw, 30px);
+      margin-bottom: 6px;
+    }
+    .menu-block .rule { margin-bottom: 18px; }
+
+    .item { display: flex; align-items: baseline; gap: 10px; padding: 9px 0; }
+    .item .name { font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; font-size: clamp(14px, 3.4vw, 16px); white-space: nowrap; }
+    .item .leader { flex: 1; border-bottom: 2.5px dotted var(--line); transform: translateY(-4px); min-width: 24px; }
+    .item .star { flex: 0 0 auto; width: 13px; color: var(--brown); transform: translateY(-2px); }
+
+    .menu-note {
+      margin-top: 4px;
+      text-align: center;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: clamp(11px, 2.8vw, 13px);
+      background: var(--cream-2);
+      border: 2px solid var(--brown);
+      box-shadow: 5px 5px 0 var(--brown);
+      padding: 14px 16px;
+      line-height: 1.6;
+    }
+
+    .fineprint {
+      text-align: center;
+      font-size: 10.5px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.65;
+      margin-top: 14px;
+      font-weight: 600;
+    }
+
+    /* ---------- footer ---------- */
+    footer {
+      margin-top: clamp(30px, 7vw, 52px);
+      background: var(--brown-deep);
+      color: var(--cream);
+      text-align: center;
+      padding: clamp(26px, 6vw, 40px) 18px;
+    }
+    footer .frolic { font-weight: 800; letter-spacing: 0.3em; text-transform: uppercase; font-size: clamp(12px, 3vw, 15px); }
+    footer .uni { margin-top: 8px; font-size: clamp(11px, 2.8vw, 13px); letter-spacing: 0.12em; opacity: 0.85; }
+    footer .handle { margin-top: 16px; font-weight: 700; letter-spacing: 0.18em; font-size: clamp(12px, 3vw, 14px); }
+    footer .ig {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-top: 20px;
+      color: var(--cream);
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      font-size: clamp(13px, 3.2vw, 15px);
+      border-bottom: 2px solid rgba(239, 233, 216, 0.35);
+      padding-bottom: 5px;
+    }
+    footer .ig svg { width: 18px; height: 18px; }
+    footer .ig:hover { border-color: var(--cream); }
+    footer .credit { margin-top: 20px; font-size: 10px; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; opacity: 0.55; }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <div class="grid-corner grid-tl"></div>
+    <div class="grid-corner grid-br"></div>
+
+    <div class="inner">
+      <header class="topbar">
+        <span>Koffee Villa</span>
+        <span class="dot" aria-hidden="true"></span>
+        <span>Frolic &rsquo;26</span>
+      </header>
+
+      <!-- HERO -->
+      <section class="hero">
+        <p class="script">Congratulations!</p>
+        <h1>You&rsquo;ve won</h1>
+
+        <div class="burst-wrap">
+          <svg class="burst" viewBox="0 0 200 200" aria-hidden="true">
+            <polygon fill="#7e2f15" points="100,0 121.2,20.8 150,13.4 158,42 186.6,50 179.2,78.8 200,100 179.2,121.2 186.6,150 158,158 150,186.6 121.2,179.2 100,200 78.8,179.2 50,186.6 42,158 13.4,150 20.8,121.2 0,100 20.8,78.8 13.4,50 42,42 50,13.4 78.8,20.8"/>
+          </svg>
+          <div class="burst-text">
+            <span class="pct">10%</span>
+            <span class="off">OFF</span>
+          </div>
+          <svg class="sparkle sp1" viewBox="0 0 200 200" fill="currentColor" aria-hidden="true"><path d="M100 0 C105 60 115 70 200 100 C115 130 105 140 100 200 C95 140 85 130 0 100 C85 70 95 60 100 0 Z"/></svg>
+          <svg class="sparkle sp2" viewBox="0 0 200 200" fill="currentColor" aria-hidden="true"><path d="M100 0 C105 60 115 70 200 100 C115 130 105 140 100 200 C95 140 85 130 0 100 C85 70 95 60 100 0 Z"/></svg>
+          <svg class="sparkle sp3" viewBox="0 0 200 200" fill="currentColor" aria-hidden="true"><path d="M100 0 C105 60 115 70 200 100 C115 130 105 140 100 200 C95 140 85 130 0 100 C85 70 95 60 100 0 Z"/></svg>
+        </div>
+
+        <p class="hero-sub">On your entire bill &mdash;<br />every coffee, affogato &amp; add-on</p>
+      </section>
+
+      <!-- INSTAGRAM STRIP -->
+      <a class="ig-strip" href="https://instagram.com/koffee.villa" target="_blank" rel="noopener" aria-label="Follow Koffee Villa on Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor" stroke="none"/></svg>
+        <span>Follow us on Instagram &mdash;</span>
+        <span class="handle">@koffee.villa</span>
+      </a>
+
+      <!-- LIVE OFFER COUNTER -->
+      <div class="counter-band skeleton" id="counterBand">
+        <div class="cb-top">This offer has already been claimed by</div>
+        <div class="cb-num" id="cbNum" aria-live="polite">
+          <span class="digit">0</span>
+        </div>
+        <div class="cb-bottom">people &mdash; don&rsquo;t miss out!</div>
+      </div>
+
+      <section>
+        <h2 class="display">How to claim</h2>
+        <div class="rule" role="presentation"></div>
+
+        <ol class="steps">
+          <li>
+            <span class="step-num">1</span>
+            <span>Visit <strong>Shop No.&nbsp;7</strong> at Darshan University</span>
+          </li>
+          <li>
+            <span class="step-num">2</span>
+            <span>Come on <strong>18th &amp; 19th September</strong></span>
+          </li>
+          <li>
+            <span class="step-num">3</span>
+            <span>Show <strong>this page</strong> at the counter &amp; enjoy</span>
+          </li>
+        </ol>
+
+        <div class="coupon">
+          <div class="coupon-inner">
+            <div class="where">Shop No. 7</div>
+            <div class="when">18th &amp; 19th Sept</div>
+            <div class="hint">FROLIC 2026 &middot; Darshan University</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MENU -->
+      <section>
+        <h2 class="display">The Menu</h2>
+        <div class="rule" role="presentation"></div>
+
+        <div class="menu-grid">
+          <div>
+            <div class="menu-block">
+              <h3>Coffee</h3>
+              <div class="rule" role="presentation"></div>
+              <div class="item"><span class="name">Nescafe Smooth</span><span class="leader"></span><svg class="star" viewBox="0 0 200 200" fill="currentColor" aria-hidden="true"><path d="M100 0 C105 60 115 70 200 100 C115 130 105 140 100 200 C95 140 85 130 0 100 C85 70 95 60 100 0 Z"/></svg></div>
+              <div class="item"><span class="name">Classic</span><span class="leader"></span><svg class="star" viewBox="0 0 200 200" fill="currentColor" aria-hidden="true"><path d="M100 0 C105 60 115 70 200 100 C115 130 105 140 100 200 C95 140 85 130 0 100 C85 70 95 60 100 0 Z"/></svg></div>
+              <div class="item"><span class="name">Vanilla</span><span class="leader"></span><svg class="star" viewBox="0 0 200 200" fill="currentColor" aria-hidden="true"><path d="M100 0 C105 60 115 70 200 100 C115 130 105 140 100 200 C95 140 85 130 0 100 C85 70 95 60 100 0 Z"/></svg></div>
+              <div class="item"><span class="name">Butterscotch</span><span class="leader"></span><svg class="star" viewBox="0 0 200 200" fill="currentColor" aria-hidden="true"><path d="M100 0 C105 60 115 70 200 100 C115 130 105 140 100 200 C95 140 85 130 0 100 C85 70 95 60 100 0 Z"/></svg></div>
+              <div class="item"><span class="name">Hazzlenut</span><span class="leader"></span><svg class="star" viewBox="0 0 200 200" fill="currentColor" aria-hidden="true"><path d="M100 0 C105 60 115 70 200 100 C115 130 105 140 100 200 C95 140 85 130 0 100 C85 70 95 60 100 0 Z"/></svg></div>
+            </div>
+
+            <div class="menu-block">
+              <h3>Add-on&rsquo;s</h3>
+              <div class="rule" role="presentation"></div>
+              <div class="item"><span class="name">Creame</span><span class="leader"></span><svg class="star" viewBox="0 0 200 200" fill="currentColor" aria-hidden="true"><path d="M100 0 C105 60 115 70 200 100 C115 130 105 140 100 200 C95 140 85 130 0 100 C85 70 95 60 100 0 Z"/></svg></div>
+              <div class="item"><span class="name">Ice-Cream</span><span class="leader"></span><svg class="star" viewBox="0 0 200 200" fill="currentColor" aria-hidden="true"><path d="M100 0 C105 60 115 70 200 100 C115 130 105 140 100 200 C95 140 85 130 0 100 C85 70 95 60 100 0 Z"/></svg></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="menu-block">
+              <h3>Affogato</h3>
+              <div class="rule" role="presentation"></div>
+              <div class="item"><span class="name">Vanilla</span><span class="leader"></span><svg class="star" viewBox="0 0 200 200" fill="currentColor" aria-hidden="true"><path d="M100 0 C105 60 115 70 200 100 C115 130 105 140 100 200 C95 140 85 130 0 100 C85 70 95 60 100 0 Z"/></svg></div>
+              <div class="item"><span class="name">Hazzlenut</span><span class="leader"></span><svg class="star" viewBox="0 0 200 200" fill="currentColor" aria-hidden="true"><path d="M100 0 C105 60 115 70 200 100 C115 130 105 140 100 200 C95 140 85 130 0 100 C85 70 95 60 100 0 Z"/></svg></div>
+              <div class="item"><span class="name">Cookie &amp; Creame</span><span class="leader"></span><svg class="star" viewBox="0 0 200 200" fill="currentColor" aria-hidden="true"><path d="M100 0 C105 60 115 70 200 100 C115 130 105 140 100 200 C95 140 85 130 0 100 C85 70 95 60 100 0 Z"/></svg></div>
+            </div>
+          </div>
+        </div>
+
+        <p class="menu-note">Your entire bill is 10% off<br />when you show this page ☕</p>
+        <p class="fineprint">One redemption per person &middot; discount applied on the total bill &middot; valid only on 18&ndash;19 Sept at Shop No. 7</p>
+      </section>
+    </div>
+
+    <footer>
+      <div class="frolic">FROLIC 2026</div>
+      <div class="uni">Darshan University</div>
+      <a class="ig" href="https://instagram.com/koffee.villa" target="_blank" rel="noopener" aria-label="Koffee Villa on Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor" stroke="none"/></svg>
+        <span>@koffee.villa</span>
+      </a>
+      <div class="handle">@DarshanUniversity</div>
+      <div class="credit">Made by Harsh N. Parmar</div>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      var band = document.getElementById("counterBand");
+      var numEl = document.getElementById("cbNum");
+
+      /* ============ COUNTER SETUP ============
+         Local (python3 server.py):  leave "" below
+         Online  (Cloudflare Worker): paste your worker URL, e.g.
+         var WORKER_URL = "https://frolic-counter.yourname.workers.dev";   */
+      var WORKER_URL = "";
+
+      var API = WORKER_URL ? WORKER_URL.replace(/\/$/, "") + "/api/count" : "/api/count";
+
+      function render(n) {
+        var digits = String(n).split("");
+        var html = "";
+        for (var i = 0; i < digits.length; i++) {
+          html += '<span class="digit">' + digits[i] + "</span>";
+        }
+        numEl.innerHTML = html;
+        band.classList.remove("skeleton");
+        var ds = numEl.querySelectorAll(".digit");
+        ds.forEach(function (d, i) {
+          d.style.animationDelay = i * 0.06 + "s";
+          d.classList.add("bump");
+        });
+      }
+
+      fetch(API, { cache: "no-store" })
+        .then(function (r) {
+          if (!r.ok) throw new Error("bad status");
+          return r.json();
+        })
+        .then(function (data) {
+          if (data && typeof data.count === "number") render(data.count);
+        })
+        .catch(function () {
+          // Backend not running (e.g. file opened directly) — hide the band quietly
+          band.style.display = "none";
+        });
+    })();
+  </script>
+</body>
+</html>
